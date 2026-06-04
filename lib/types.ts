@@ -36,4 +36,5 @@ export type Phrase = {
   scale: ScaleNote[];
   licks: Lick[];
   point: string; // 「ここがポイント」本文
+  hideStepOrder?: boolean; // true でリックの弾き順番号を非表示
 };

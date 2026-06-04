@@ -8,11 +8,13 @@ export default function Fretboard({
   lick,
   hot,
   fretRange,
+  showStepOrder = true,
 }: {
   scale: ScaleNote[];
   lick: LickNote[];
   hot: number;
   fretRange: [number, number];
+  showStepOrder?: boolean;
 }) {
   const [minF, maxF] = fretRange,
     COLS = maxF - minF + 1,
@@ -84,7 +86,9 @@ export default function Fretboard({
               {isHot && <circle cx={cx(f)} cy={cy(s)} r="18" fill="none" stroke={C.amber} strokeWidth="2.5" />}
               <circle cx={cx(f)} cy={cy(s)} r={isHot ? 15 : 13} fill={fill} stroke={isHot ? "#1c1410" : "#fff"} strokeWidth={isHot ? 3 : 1.8} />
               <text x={cx(f)} y={cy(s) + degSize(lbl) / 2.8} textAnchor="middle" fontSize={degSize(lbl)} fontWeight="800" fill="#fff" fontFamily="Zen Maru Gothic">{lbl}</text>
-              <text x={cx(f)} y={cy(s) - 16} textAnchor="middle" fontSize="8.5" fontWeight="800" fill="#1c1410" fontFamily="JetBrains Mono">{orders.join(",")}</text>
+              {showStepOrder && (
+                <text x={cx(f)} y={cy(s) - 16} textAnchor="middle" fontSize="8.5" fontWeight="800" fill="#1c1410" fontFamily="JetBrains Mono">{orders.join(",")}</text>
+              )}
             </g>
           );
         })}

@@ -139,9 +139,9 @@ export default function PhraseView({ phrase }: { phrase: Phrase }) {
         {/* リック表示 */}
         <div style={{ background: "linear-gradient(135deg,#3a2410,#26190f)", border: `1.5px solid ${C.amber}`, borderRadius: 16, padding: "16px 18px", marginBottom: 14, boxShadow: "0 0 24px #e8821e22" }}>
           <div style={{ fontSize: 12.5, color: C.amberHi, fontWeight: 700, marginBottom: 10 }}>✎ {L.note}</div>
-          <Fretboard scale={SCALE} lick={L.seq} hot={hot} fretRange={phrase.fretRange} />
+          <Fretboard scale={SCALE} lick={L.seq} hot={hot} fretRange={phrase.fretRange} showStepOrder={!phrase.hideStepOrder} />
           <div style={{ fontSize: 11.5, color: C.muted, marginTop: 8 }}>
-            数字＝弾く順　<span style={{ color: C.blue }}>青＝CΔ7への解決音</span>
+            {!phrase.hideStepOrder && <>数字＝弾く順　</>}<span style={{ color: C.blue }}>青＝解決音</span>
           </div>
 
           {/* 度数の流れ */}
