@@ -93,6 +93,19 @@ export default function PhraseView({ phrase }: { phrase: Phrase }) {
         input[type=range]{accent-color:${C.amber}}`}</style>
 
       <div style={{ maxWidth: 560, margin: "0 auto" }}>
+        <a
+          href="/"
+          style={{
+            display: "inline-block",
+            marginBottom: 8,
+            fontSize: 11,
+            color: C.muted,
+            textDecoration: "none",
+            fontFamily: "'JetBrains Mono',monospace",
+          }}
+        >
+          ← フレーズ一覧
+        </a>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <span style={{ fontSize: 26 }}>☕</span>
           <h1 style={{ margin: 0, fontSize: 21, fontWeight: 700 }}>{phrase.title}</h1>
