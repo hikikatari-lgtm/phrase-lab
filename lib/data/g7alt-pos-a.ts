@@ -11,7 +11,7 @@ export const g7altPosA: Phrase = {
   key: "G",
   progression: "II-V-I (key = C major)",
   technique: ["altered"],
-  fretRange: [3, 7],
+  fretRange: [2, 7], // ボックス自体は 3〜7fr。解決音 4弦2fr のために1フレット左に拡張
   positionLabel: "Gオルタード・6弦ルート（3〜7fr / 5th音なし）",
   // ポジション（楽典計算で確定）
   scale: [
