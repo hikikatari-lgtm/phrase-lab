@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "phrase-lab — G7alt → CΔ7 リック",
+  title: "phrase-lab",
   description:
     "ギターのフレーズを「フレットボード＋度数＋サウンド＋解説」で理解するアプリ。",
 };

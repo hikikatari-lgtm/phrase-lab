@@ -1,18 +1,20 @@
-import { C, roleColor, type ScaleNote, type LickNote } from "@/lib/music";
+import { C, roleColor } from "@/lib/music";
+import type { ScaleNote, LickNote } from "@/lib/types";
 
-// 6弦ボックス（弦＝横線・上=1弦, フレット列, 指定レンジ fret 3〜6）
+// 6弦ボックス（弦＝横線・上=1弦, フレット列, 指定レンジ）
 // フレットボードは明るいクリーム地（#fbf7ef）で読みやすく。
 export default function Fretboard({
   scale,
   lick,
   hot,
+  fretRange,
 }: {
   scale: ScaleNote[];
   lick: LickNote[];
   hot: number;
+  fretRange: [number, number];
 }) {
-  const minF = 3,
-    maxF = 6,
+  const [minF, maxF] = fretRange,
     COLS = maxF - minF + 1,
     STR = 6,
     padL = 26,
@@ -48,7 +50,9 @@ export default function Fretboard({
         {Array.from({ length: COLS + 1 }).map((_, c) => (
           <line key={c} x1={padL + c * colW} y1={cy(0)} x2={padL + c * colW} y2={cy(STR - 1)} stroke="#bbb" strokeWidth="2" />
         ))}
-        <circle cx={cx(5)} cy={cy(STR - 1) + 15} r="3.5" fill="#ccc" />
+        {minF <= 5 && maxF >= 5 && (
+          <circle cx={cx(5)} cy={cy(STR - 1) + 15} r="3.5" fill="#ccc" />
+        )}
         {Array.from({ length: COLS }).map((_, c) => (
           <text key={c} x={cx(minF + c)} y={cy(STR - 1) + 27} textAnchor="middle" fontSize="9" fill="#999" fontFamily="JetBrains Mono">{minF + c}</text>
         ))}
