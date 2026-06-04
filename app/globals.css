@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@600;800&display=swap');
+@import "tailwindcss";
+
+/* §3 カラートークン（“深煎り”テーマ） */
+@theme {
+  --color-bg: #1c1410;
+  --color-surface: #26190f;
+  --color-surface2: #33241733;
+  --color-line: #4a3a2c;
+  --color-amber: #e8821e;
+  --color-amber-hi: #ffb056;
+  --color-cream: #f1e6d2;
+  --color-muted: #a08a6e;
+  --color-green: #7a9e63;
+  --color-red: #e0301e; /* 度数：コードトーン */
+  --color-pink: #d24bc8; /* 度数：テンション */
+  --color-blue: #3f8fc0; /* 度数：解決音 */
+  --font-sans: "Zen Maru Gothic", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  background: #1c1410;
+}
+
+body {
+  background: #1c1410;
+  color: #f1e6d2;
+  font-family: "Zen Maru Gothic", sans-serif;
+}
