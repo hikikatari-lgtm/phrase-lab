@@ -14,6 +14,7 @@ export const gmixoComp: Phrase = {
   technique: ["mixolydian"],
   fretRange: [7, 10],
   positionLabel: "Gミクソリディアン（7〜10fr / 5弦ルート）",
+  hideStepOrder: true,
 
   // ポジション（G Mixolydian, fret 7〜10）。楽典計算で確定。
   scale: [
