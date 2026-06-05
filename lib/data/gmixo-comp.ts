@@ -30,12 +30,13 @@ export const gmixoComp: Phrase = {
   licks: [
     {
       name: "コンパクトな運指",
-      note: "5弦root(G)から4th(C)まで6音アルペジオ上行 G B D F A C / 3弦10f→2弦10fはジョイント不使用・1弦8f→7fはスライド → 2弦10fで小節跨ぎ",
+      note: "5弦root(G)から4th(C)まで6音アルペジオ上行 G B D F A C / 3弦10f→2弦10fはジョイント不使用・1弦8f→7fはスライド → 2弦8f(G)でCΔ7の5th(P5)へ解決",
       seq: [
         { s: 4, f: 10, deg: "R" },  { s: 3, f: 9, deg: "△3" }, { s: 2, f: 7, deg: "P5" }, { s: 2, f: 10, deg: "♭7" },
         { s: 1, f: 10, deg: "9" },  { s: 0, f: 8, deg: "11" }, // 1弦8fr = C（4th）
         { s: 0, f: 7, deg: "△3" }, // 1弦8f→7f スライド = B
         { s: 1, f: 10, deg: "9" }, // 2弦10fr = A、小節跨ぎで CΔ7 へ
+        { s: 1, f: 8, deg: "P5", resolve: true }, // 2弦8fr = G = CΔ7 の5th(P5)へ解決
       ],
     },
   ],
