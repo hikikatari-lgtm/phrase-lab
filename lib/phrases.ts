@@ -5,6 +5,7 @@ import { g7altPosB } from "./data/g7alt-pos-b";
 import { gmixoArp } from "./data/gmixo-arp";
 import { gmixoComp } from "./data/gmixo-comp";
 import { gcondim } from "./data/gcondim";
+import { gcondimB } from "./data/gcondim-b";
 // 今後ここに import を足していくだけ
 // import { dim7c } from "./data/dim7c";
 
@@ -15,6 +16,7 @@ export const PHRASES: Phrase[] = [
   gmixoArp,
   gmixoComp,
   gcondim,
+  gcondimB,
   // dim7c,
 ];
 
